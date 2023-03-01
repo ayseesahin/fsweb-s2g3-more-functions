@@ -27,14 +27,6 @@ console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"));
 console.log(dosyaAdiniBul("Beethoven_5.mp3"));
 console.log(dosyaAdiniBul(""));
 
-/*function dosyaAdiniBul(dosyaYoluP) {
-
-  const parcala = dosyaYoluP.split("/");
-  const dosyaAdi = parcala[parcala.length -1];
-  return  dosyaAdi;
-
-}
-console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"))
 
 
 /* 
@@ -56,8 +48,6 @@ console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"))
  örnek output: 104
  */
 
-//const sayilar3 = []
-//const sayilar4 = [109, 216, 288, 143, 71, 185, -278, 194, 5]
 
 
 function ortalamaBul(inputCd) {
@@ -91,9 +81,6 @@ console.log(ortalamaBul([109, 216, 288, 143, 71, 185, -278, 194, 5]));
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-
-
-const sayilar2 = [109, 216, 288, 143, 71, 185, -278, 194, 5];
 
 function ortalamadanBuyukleriBul(degerler, ortalamaBulCB) {
 
