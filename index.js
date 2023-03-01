@@ -52,7 +52,7 @@ console.log(dosyaAdiniBul(""));
 
 function ortalamaBul(inputCd) {
 
-const outputCd = inputCd.length === 0 ? null : Math.round(inputCd.reduce((x, y) => {return x + y}, 0) / inputCd.length);
+const outputCd = inputCd.length === 0 ? null : Math.round(inputCd.reduce((x, y) => x + y, 0) / inputCd.length);
 return outputCd;
 }
 console.log(ortalamaBul([]));
