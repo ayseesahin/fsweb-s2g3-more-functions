@@ -16,31 +16,60 @@
   örnek output: ""
 */
 
-function dosyaAdiniBul(/* kodlar buraya */) {
-  // kodlar buraya
+function dosyaAdiniBul(inputPath) {
+  const outputPath = inputPath.split("/");
+  const dosyaAdi = outputPath[outputPath.length - 1];
+  return dosyaAdi;
+
 }
 
-/*
+console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"));
+console.log(dosyaAdiniBul("Beethoven_5.mp3"));
+console.log(dosyaAdiniBul(""));
+
+/*function dosyaAdiniBul(dosyaYoluP) {
+
+  const parcala = dosyaYoluP.split("/");
+  const dosyaAdi = parcala[parcala.length -1];
+  return  dosyaAdi;
+
+}
+console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"))
+
+
+/* 
   GÖREV 2
   - Input:  Bir sayı arrayini parametre olarak alacak bir fonksiyon oluştur.
   - Output: Yazacağın fonksiyon input olarak aldığı sayı arrayinin aritmetik ortalamasını dönmeli.
 
-  örnek input:  []
-  örnek output: null
+ örnek input:  []
+ örnek output: null
 
-  örnek input:  [4]
-  örnek output: 4
+ örnek input:  [4]
+ örnek output: 4
   
-  örnek input:  [50, -26, 153, 7]
-  örnek output: 46
+ örnek input:  [50, -26, 153, 7]
+ örnek output: 46
 
-  örnek input:  [109, 216, 288, 143, 71, 185, -278, 194, 5]
-  örnek output: 104
-*/
 
-function ortalamaBul(/* kodlar buraya */) {
-  // kodlar buraya
+ örnek input:  [109, 216, 288, 143, 71, 185, -278, 194, 5]
+ örnek output: 104
+ */
+
+//const sayilar3 = []
+//const sayilar4 = [109, 216, 288, 143, 71, 185, -278, 194, 5]
+
+
+function ortalamaBul(inputCd) {
+
+const outputCd = inputCd.length === 0 ? null : Math.round(inputCd.reduce((x, y) => {return x + y}, 0) / inputCd.length);
+return outputCd;
 }
+console.log(ortalamaBul([]));
+console.log(ortalamaBul([4]));
+console.log(ortalamaBul([50, -26, 153, 7]));
+console.log(ortalamaBul([109, 216, 288, 143, 71, 185, -278, 194, 5]));
+
 
 /*
   GÖREV 3
@@ -62,9 +91,22 @@ function ortalamaBul(/* kodlar buraya */) {
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(/* kodlar buraya */) {
-  // kodlar buraya
+
+
+const sayilar2 = [109, 216, 288, 143, 71, 185, -278, 194, 5];
+
+function ortalamadanBuyukleriBul(degerler, ortalamaBulCB) {
+
+const sonuc = degerler.length === 0 ? null : degerler.filter(x => x >= ortalamaBulCB(degerler));
+return sonuc;
+
 }
+console.log(ortalamadanBuyukleriBul([], ortalamaBul));
+console.log(ortalamadanBuyukleriBul([4], ortalamaBul));
+console.log(ortalamadanBuyukleriBul([50, -26, 153, 7], ortalamaBul));
+console.log(ortalamadanBuyukleriBul([109, 216, 288, 143, 71, 185, -278, 194, 5], ortalamaBul));
+
+
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
 function as() {
